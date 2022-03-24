@@ -18,7 +18,7 @@ const Weather = () => {
     }, []);
 
     return (
-        weather.map((card) => <WeatherCard temp= {card.temperature}/>)
+        weather.map((card) => <WeatherCard temp= {card.temperature} name= {card.name} />)
     )
 }
 
