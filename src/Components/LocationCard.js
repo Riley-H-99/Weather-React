@@ -7,11 +7,11 @@ const LocationCard = () => {
     return (
         <div>
             <form>
-                <label for="lattitude">Lattitude:</label>
+                <label class="default" for="lattitude">Lattitude:</label>
                 <input type="number" id="lattitude" name="lattitude"></input>
-                <label for="longitude">Longitude:</label>
+                <label class="right" for="longitude">Longitude:</label>
                 <input type="number" id="longitude" name="longitude"></input>
-                <input type="submit" value="Submit"></input>
+                <input type="submit" value="Submit" formmethod="get"></input>
             </form>
         </div>
     )

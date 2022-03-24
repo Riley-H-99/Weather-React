@@ -8,16 +8,19 @@ import LocationCard from'./Components/LocationCard.js';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1> Weather Forecast </h1>
+    <div>
+      <header class="App-Header">
+        <h1 class="test"> Weather Forecast </h1>
       </header>
       <body>
-        <Weather />
+        <LocationCard />
+        <div>
+          <Weather />
+        </div>
       </body>
     </div>
   );
 }
 
-//ReactDOM.render(<LocationCard />, document.querySelector('#root'));
-ReactDOM.render([<LocationCard />, <Weather />], document.querySelector('#root'));
+ReactDOM.render(<App />, document.querySelector('#root'));
+//ReactDOM.render([<LocationCard />, <Weather />], document.querySelector('#root'));

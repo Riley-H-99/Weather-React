@@ -7,8 +7,9 @@ const Weather = () => {
 
     useEffect(() => {
         (async() => {
-            const lat = 36.356766;
-            const long = -94.236638;
+            let params = new URLSearchParams(window.location.search);
+            const lat = params.get('lattitude');
+            const long = params.get('longitude');
             const res = await axios.get(`https://api.weather.gov/points/${lat},${long}`);
             //const resJson = await res.json();
             const response = await axios.get(res.data.properties.forecast);

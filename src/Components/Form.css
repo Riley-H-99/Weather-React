@@ -1,7 +1,7 @@
 input[type=number] {
     width: 25%;
-    padding: 12px 12px;
-    margin: 25px 25px;
+    padding: 8px 12px;
+    margin: 10px 10px;
     box-sizing: border-box;
 }
 
@@ -11,6 +11,18 @@ input[type=submit] {
   color: white;
   padding: 16px 32px;
   text-decoration: none;
-  margin: 4px 2px;
+  margin: 4px 20px;
   cursor: pointer;
+}
+
+label[class=default] {
+    padding: 30px 0px;
+    margin-left: 30pc;
+    font-size: larger;
+    font-weight: bold;
+}
+
+label[class="right"] {
+    font-size: larger;
+    font-weight: bold;
 }
