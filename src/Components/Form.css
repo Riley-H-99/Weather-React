@@ -26,3 +26,36 @@ label[class="right"] {
     font-size: larger;
     font-weight: bold;
 }
+
+.WeatherCard {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(90, 179, 214);
+    margin: 0px 10px;
+    padding: 10px 50px;
+}
+
+.hot {
+    background-color: red;
+}
+
+.cold {
+    background-color: rgb(146, 245, 252);
+}
+
+h2.name {
+    text-align: center;
+    width: 100%;
+}
+
+h2.temperature {
+    text-align: center;
+}
+
+td.test {
+    margin-top: auto;
+}
+
+td.test2 {
+    width: 275px;
+}
