@@ -1,13 +1,18 @@
 import React from "react";
-import 'reactstrap'
+import 'reactstrap';
+import './Form.css';
 
 
 const WeatherCard = props => {
     return (
-        <div class="container p-5 my-5 bg-dark text-white">
-            <h2> {props.name} </h2>
-            <h2> {props.temp} </h2>
-        </div>
+        <tr class={`WeatherCard ${props.temp>70 ? "hot" : ""} ${props.temp<40 ? "cold" : ""}`} id="container">
+            <td class="test2" valign="top">
+                <h2 class="name"> {props.name} </h2>
+            </td>
+            <td class="test">
+                <h2 class="temperature"> {props.temp} </h2>
+            </td>
+        </tr>
     )
 }
 
