@@ -2,9 +2,9 @@ import React, {useState, useEffect} from "react";
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import LocationCard from'./Components/LocationCard.js';
 import WeatherCard from './Components/WeatherCard';
 import axios from 'axios';
+import MapCard from "./Components/MapCard.tsx";
 
 
 const App = () => {
@@ -38,6 +38,9 @@ const App = () => {
         if (!periods[0].isDaytime) {
           dayObjects.pop();
           nightObjects.shift();
+        } else {
+          dayObjects.pop();
+          nightObjects.pop();
         }
         setDay(dayObjects);
         setNight(nightObjects);
@@ -50,10 +53,10 @@ const App = () => {
         <h1 class="test"> Weather Forecast </h1>
       </header>
       <body>
-        <LocationCard />
+        <MapCard />
         <table class="WeatherArray" id="container">
           <div class="WeatherArray">
-            {day.map((card) => <WeatherCard temp= {card.temperature} name= {card.name}/>)}
+            {day.length !== 0 ? day.map((card) => <WeatherCard temp= {card.temperature} name= {card.name}/>) : <h1>Selected Location's Weather Information Not Available</h1>}
           </div>
           <div class="WeatherArray">
             {night.map((card) => <WeatherCard temp= {card.temperature} name= {card.name}/>)}
@@ -65,4 +68,3 @@ const App = () => {
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'));
-//ReactDOM.render([<LocationCard />, <Weather />], document.querySelector('#root'));
