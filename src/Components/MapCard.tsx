@@ -105,7 +105,6 @@ const MapCard: React.VFC = () => {
           zoom={zoom}
           style={{ height: "30pc", overflow: "visible" }}
         >
-
           {clicks.map((latLng, i) => {
             if (i === clicks.length - 1) {
                 return <Marker key={i} position={latLng} />
@@ -114,7 +113,6 @@ const MapCard: React.VFC = () => {
         </Map>
 
       </Wrapper>
-      {/* Basic form for controlling center and zoom of map. */}
 
     </div>
   );
